@@ -7,10 +7,10 @@ object Currency extends Enumeration {
   val Yen: money.Currency.Value = Value("JPY")
 
   def main(args: Array[String]): Unit = {
-    println(Euro)
     val dollarExchangeRate = Map(Euro -> 0.863187, Dollar -> 1, Yen -> 113.648)
-    println(dollarExchangeRate)
-    println(dollarExchangeRate(Euro))
+    println(s"Euro :                     $Euro")
+    println(s"DollarExchangeRate :       $dollarExchangeRate")
+    println(s"DollarExchangeRate(Euro) : ${dollarExchangeRate(Euro)}")
   }
 
 }
