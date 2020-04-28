@@ -22,4 +22,13 @@ object Account {
     def *(account: Account) = Account(factor * account.amount, account.currency)
   }
   def double2Factor(factor: Double): Factor = new Factor(factor)
+
+  def main(args: Array[String]): Unit = {
+    val a1:Account = Account(10, Dollar)
+    val a2 = 0.1 * a1
+    val a3 = a1  * 10.0
+    println(s"a1 : $a1")
+    println(s"a2 : $a2")
+    println(s"a3 : $a3")
+  }
 }
