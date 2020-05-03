@@ -1,13 +1,12 @@
-package fp
+package ootrait
 
 import common.Val
 
-
 object Test extends App {
+
   var count = 0
   var max = 0
   val parser = new Parser
-
   def test(program: String, expected: Option[Val]): Unit = {
     println(s"==== $program")
     max += 1
@@ -16,9 +15,9 @@ object Test extends App {
     if (parse.successful) {
       val ast = parse.get
       try {
-        result = Some(eval(ast))
+        result = Some(ast.eval)
         println(s"AST: $ast")
-        println(s"infix version: ${toInfix(ast)}")
+        println(s"infix version: ${ast.toInfix}")
         println(s"=> $result")
       } catch {
         case ex: Exception => ex.printStackTrace()
