@@ -6,7 +6,7 @@ object RationalScalaTest {
   val r1 = new Rational(1).add(new Rational(1, 2))
   val r2 = new Rational(1, 2) + new Rational(1)
 
-  def main(args: Array[String]) = {
+  def main(args: Array[String]): Unit = {
     System.out.println(r1)
     System.out.println(r2)
 

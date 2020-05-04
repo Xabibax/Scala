@@ -22,7 +22,7 @@ object Rational {
   def apply(n: Int) = new Rational(n)
   def apply(n: Int, d: Int) = new Rational(n, d)
 
-  def main(args: Array[String]) = {
+  def main(args: Array[String]): Unit = {
     System.out.println(r1)
     System.out.println(r2)
 

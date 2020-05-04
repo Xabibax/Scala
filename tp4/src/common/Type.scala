@@ -1,5 +1,5 @@
 package common
 
 sealed trait Type
-object I extends Type
-object B extends Type
+case object I extends Type
+case object B extends Type

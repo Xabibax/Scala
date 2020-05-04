@@ -47,6 +47,14 @@ object Test extends App {
   test("(== (! true) (&& false true))" , Some(true))
   test("(+ 1 true)", None)
   test("(&& 1 true)", None)
+  /**
+   * Test personnalisées
+   */
+  test("(== 1 true)", Some(false))
+  test("(== (! 1) (&& false true))" , None)
+  test("(== (! false) (&& 1 true))" , None)
+  test("(== (! true) (== 1 true))" , Some(true))
+  test("(&& 1 true)", None)
 
   report()
 }

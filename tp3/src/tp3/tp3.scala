@@ -6,12 +6,13 @@ class tp3{
 object tp3 {
   def decorate(left: String, s: String, right: String) = left + s + right
   def decorateQ = (s: String) => decorate("\"", s, "\"")
-  def decorateC: String => (String => String => String) = s => ( l => r => decorate(l, s, r))
+  def decorateC: String => String => String => String = s => l => r => decorate(l, s, r)
 
 
   def fact(n: Int): Int = if (n == 0) 1 else n * fact(n-1)
 
   def fact2(n: BigInt): BigInt = {
+    @scala.annotation.tailrec
     def _fact2(n: BigInt, res: BigInt): BigInt = if (n > 1) _fact2(n - 1, n * res) else res
     _fact2(n, 1)
   }
