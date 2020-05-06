@@ -2,22 +2,11 @@ package rainfallS
 
 object rainfallS {
 
-  import scala.util.control.Breaks._
   def rainfall(rainfalls: List[Int]): Option[Double] = {
-    var sum = 0
-    var n = 0
-    for (rainfall <- rainfalls)
-      breakable {
-        rainfall match {
-          case -999 => break()
-          case x if x >= 0 =>
-            n += 1
-            sum += rainfall
-          case _ =>
-        }
-      }
+    val tmp = rainfalls.takeWhile(_ != -999).filter(_ >= 0)
+    val n = tmp.size
     n match {
-      case x if x != 0 => Option(sum.toDouble / n)
+      case x if x != 0 => Option(tmp.reduceOption(_ + _).head.toDouble / n)
       case _ => None
     }
   }
