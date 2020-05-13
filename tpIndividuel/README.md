@@ -8,7 +8,7 @@
 ## Remarques
 
 J'ai créé un trait rainfall pour mutualisé les appels aux tests du tp 
-(`src.rainfallS.rainfallS`).
+(`src.rainfall.rainfall`).
 
 - 3 - Passage à Scala (`src.rainfallS.rainfallS`)
 

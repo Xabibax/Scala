@@ -13,4 +13,4 @@ Les seuls exceptions qui apparaissent sont pour les deux derniers cas :
 *  ==== (&& 1 true)  
 
 C'est deux derniers cas n'étant pas censé être évalués, j'ai levé des exceptions.
-J'ai aussi rendu les pattern matching exhaustif.
+Nous avons aussi rendu les pattern matching exhaustif.
